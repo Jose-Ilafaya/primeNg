@@ -1,1 +1,26 @@
-<p-menubar ngClass="menu" [model]="items"></p-menubar>
+<p-menubar [model]="items" [styleClass]="'menu'"></p-menubar>
+<p-carousel class="flex flex-wrap align-items-center" [value]="cachorro"[autoplayInterval]="3000"  [numVisible]="3" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+    <ng-template  let-cachorro pTemplate="item">
+        <p-card [style]="{'margin': '0.5rem', 'margin-bottom': '2em'}">
+            <ng-template pTemplate="header">
+                <img class="imgn" src="{{cachorro}}" alt="">
+            </ng-template>
+            <ng-template pTemplate="footer">
+            </ng-template>
+        </p-card>
+    </ng-template>
+</p-carousel>
+<button pButton type="button" label="Success" (click)="mostrar()" class="p-button-success p-button-rounded"></button>
+
+<p-dialog header="Title" [(visible)]="display">
+    <p-card>
+        <img src="https://www.erapetfood.com/wp-content/uploads/2021/10/cachorro-corriendo_2.jpg" alt="">
+    </p-card>
+</p-dialog>
+<div class="card">
+    <div class="flex justify-content-center flex-wrap card-container yellow-container">
+        <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-yellow-500 font-bold text-gray-900 border-round m-2">1</div>
+        <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-yellow-500 font-bold text-gray-900 border-round m-2">2</div>
+        <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-yellow-500 font-bold text-gray-900 border-round m-2">3</div>
+    </div>
+</div>
