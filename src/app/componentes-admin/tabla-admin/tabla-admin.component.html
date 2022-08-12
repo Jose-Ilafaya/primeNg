@@ -1,0 +1,18 @@
+<p-table [value]="losUsuarios" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre</th>
+            <th>contraseña</th>
+            <th>editar</th>
+            <th>borrar</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-usuario>
+        <tr>
+            <td>{{usuario.nombreUsuario}}</td>
+            <td>{{usuario.contrasena}}</td>
+            <td><p-button><i class="pi pi-user-edit"></i></p-button></td>
+            <td><button pButton pRipple type="button" class="p-button-raised p-button-danger"><i class="pi pi-trash"></i></button></td>
+        </tr>
+    </ng-template>
+</p-table>

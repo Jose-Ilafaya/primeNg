@@ -1,15 +1,14 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { AlertaService } from './servicios/alerta.service';
-import {MenuItem} from 'primeng/api';
-import { UsuariosService } from './servicios/usuarios.service';
+import { Component, OnInit } from '@angular/core';
+import { AlertaService } from 'src/app/servicios/alerta.service';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  encapsulation:ViewEncapsulation.None
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
 })
-export class AppComponent {
-  title = 'primeNg';
+export class HomePageComponent implements OnInit {
+
   items:any=[];
   usuarios=this.servicioUsuario.getUsers()
   adminVisible:boolean=false
